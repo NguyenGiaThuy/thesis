@@ -1,0 +1,35 @@
+# Ignore Python virtual environment
+thesis-venv/
+
+# Ignore compiled Python bytecode
+*.pyc
+
+# Ignore cache and temporary files
+__pycache__/
+*.py[cod]
+*.swp
+*~
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+.env.*.prod
+
+# Ignore editor and IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore custom folders
+archived/
+checkpoints/
+datasets/
+results/
+web_app/data/
+web_app/static/

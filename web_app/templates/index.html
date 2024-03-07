@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake News Detection</title>
+        <style>
+            table {
+                table-layout: auto;
+                width: auto;
+                border-collapse: collapse;
+            } 
+            th, td {
+                overflow-wrap: break-word;
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }      
+        </style>
+    </head>
+<body>
+    <h2>CSV Upload</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv">
+        <input type="submit" value="Upload">
+    </form>
+
+    {% if items %}
+        <h2>Results:</h2>
+        <p>- Sample size: {{ sample_size }}</p>
+        <p>- Accuracy: {{ accuracy }}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="resize-img-column">Image</th>
+                    <th>Title</th>
+                    <th>True label</th>
+                    <th>Predicted label</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                    <tr>
+                        <td>
+                            <div style="width: 256px; height: 256px;">
+                                <img src="{{ url_for('static', filename=item['image']) }}" alt="Image">
+                            </div>
+                        </td>
+                        <td  style="width: 300px;">{{ item['title'] }}</td>
+                        <td style="width: 200px;">{{ item['true label'] }}</td>
+                        <td style="width: 200px;">{{ item['predicted label'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "text_encoder": "bert-base-uncased",
+  "text_encoder_trainable" : false,
+  "n_trainable_layers": 10,
+  "image_encoder": ["vgg19", "resnet50"],
+  "image_encoder_trainable" : false,
+  "dropout_prob": 0.5,
+  "repr_size": 32,
+  "lambd": 1
+}

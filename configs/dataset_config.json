@@ -1,0 +1,6 @@
+{
+  "train_dir": "datasets/train.csv",
+  "dev_dir": "datasets/dev.csv",
+  "test_dir": "datasets/test.csv",
+  "images_dir": "datasets/images"
+}
