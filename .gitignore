@@ -32,4 +32,7 @@ checkpoints/
 datasets/
 results/
 web_app/data/
-web_app/static/
+
+# Keep the static folder but do not with the children
+web_app/static/*
+!web_app/static

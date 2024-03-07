@@ -58,7 +58,7 @@ def home():
 @app.route('/upload', methods=['POST'])
 def upload():
     file = request.files['csv_file']
-    df = pd.read_csv(file)
+    df = pd.read_csv(file, sep="\t")
     items = []
     sample_size = len(df)
     accuracy = 0
