@@ -1,50 +1,29 @@
 # A Transformer-Based Multi-Modal Fake News Detection
 
-# 1. Requirements
+## I. TRAINING
+
+## II. APPLICATION
+
+### 2.1. Requirements
 
 - Python Version: `3.10`
 - CUDA Version: $\geq$ `12.1`
 
-# 2. Quick Start (Local)
+### 2.2. Quick Start (Local)
 
 ```bash
 ./start.sh
 ```
 
-# 3. Quick Start (Docker)
+### 2.3. Quick Start (Docker)
 
 ```bash
-.
+docker build -t fakenewsdetection .
+docker run -d --name fakenewsdetection fakenewsdetection
 ```
 
-# 3. Manual Installation
-
-## 3.1. PyTorch With Cuda
-
-The official page is in (PyTorch - Start Locally)[https://pytorch.org/get-started/locally/#start-locally].
-
-```bash
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+### 2.4. Compose
 ```
-
-## 3.2. Other Python Dependencies
-
-```bash
-pip3 install -r requirements.txt
-```
-
-## 3.3. Download Dataset
-
-.
-
-## 3.4. Download Models
-
-.
-
-## 3.5. Run Web App
-
-In the root folder, run:
-
-```bash
-python web_app/app.py
+cd compose
+docker compose up
 ```

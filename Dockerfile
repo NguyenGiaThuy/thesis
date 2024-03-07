@@ -1,0 +1,18 @@
+FROM python:3.10
+
+SHELL ["/bin/bash", "-c"]
+
+WORKDIR /app
+
+COPY  configs/*         \
+      models/*          \
+      utils/*           \
+      web_app/*         \
+      main.py           \
+      requirements.txt  \
+      start.sh          \
+      ./
+
+RUN apt update -y && apt upgrade -y
+RUN apt install -y curl vim
+RUN ./start.sh
