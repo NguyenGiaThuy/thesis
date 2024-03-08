@@ -45,7 +45,7 @@ model_params = {
 tokenizer = TextTokenizer.from_pretrained(model_params['text_encoder'])
 model_state_dict_dir = os.path.join(os.getcwd(), 'results', 'resnet50', 'best_model_6.pth')
 model = NewsNet3(model_params).to(dtype).to(device)
-model.load_state_dict(torch.load(model_state_dict_dir))
+model.load_state_dict(torch.load(model_state_dict_dir, map_location=torch.device('cpu')))
 
 labels = {0: 'true', 1: 'fake'}
 

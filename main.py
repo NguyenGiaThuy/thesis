@@ -128,7 +128,7 @@ if __name__ == '__main__':
         print('loading data done')
 
         model_dir = os.path.join(os.getcwd(), arguments[2])
-        model.load_state_dict(torch.load(model_dir))
+        model.load_state_dict(torch.load(model_dir, map_location=torch.device('cpu')))
         
         # Test model
         print('\ntesting model...')
