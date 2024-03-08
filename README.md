@@ -11,12 +11,16 @@
 
 ### 2.2. Quick Start (Local)
 
+At the root directory, run:
+
 ```bash
 ./scripts/install.sh
 ./scripts/start.sh
 ```
 
 ### 2.3. Quick Start (Docker)
+
+At the root directory, run:
 
 ```bash
 docker build -t fakenewsdetection .
