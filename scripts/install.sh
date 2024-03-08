@@ -64,7 +64,7 @@ echo -e "${NOCOL}[3/3] Starting to download models...${NOCOL}"
 
 if ! test -f results/resnet50/best_model_6.pth; then
     mkdir -p results
-    curl --ssl-no-revoke https://thuy-thesis.s3.ap-southeast-1.amazonaws.com/resnet50.zip --output ./results/resnet50.zip && unzip ./results/resnet50.zip -d ./results
+    curl --ssl-no-revoke https://dlzd5en6k0eap.cloudfront.net/resnet50.zip --output ./results/resnet50.zip && unzip ./results/resnet50.zip -d ./results
     echo "Successfully downloaded models."
 else
     echo "Model file: results/resnet50/best_model_6.pth has already existed."
