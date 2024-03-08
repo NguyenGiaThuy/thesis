@@ -15,4 +15,4 @@ COPY  configs/*         \
 
 RUN apt update -y && apt upgrade -y
 RUN apt install -y curl vim
-RUN ./start.sh
+RUN cd /app && ./start.sh
