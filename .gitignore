@@ -38,4 +38,4 @@ web_app/static/*
 !web_app/static
 
 # Ignore all logs
-*/logs
+compose/nginx/logs
