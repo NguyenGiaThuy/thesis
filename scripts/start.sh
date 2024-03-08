@@ -6,6 +6,8 @@
 echo ""
 echo -e "${NOCOL}Starting to run web app...${NOCOL}"
 
+mkdir -p web_app/static
+
 python3 web_app/app.py
 if ! [[ $? -eq 0 ]]; then 
 echo "Using python (instead of python3)..."

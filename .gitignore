@@ -33,9 +33,7 @@ datasets/
 results/
 web_app/data/
 
-# Keep the static folder but do not with the children
 web_app/static/*
-!web_app/static
 
 # Ignore all logs
 compose/nginx/logs
