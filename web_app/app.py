@@ -114,4 +114,4 @@ def upload():
     return render_template('index.html', items=items, sample_size=sample_size, accuracy=round(accuracy / sample_size, 3))
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host='0.0.0.0', port=5000)
