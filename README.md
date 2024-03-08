@@ -2,7 +2,7 @@
 
 ## I. TRAINING
 
-## II. APPLICATION
+## II. DEMO APPLICATION
 
 ### 2.1. Requirements
 
@@ -12,7 +12,8 @@
 ### 2.2. Quick Start (Local)
 
 ```bash
-./start.sh
+./scripts/install.sh
+./scripts/start.sh
 ```
 
 ### 2.3. Quick Start (Docker)
@@ -22,7 +23,7 @@ docker build -t fakenewsdetection .
 docker run -d --name fakenewsdetection fakenewsdetection
 ```
 
-### 2.4. Compose
+### 2.4. Docker Compose
 ```
 cd compose
 docker compose up
