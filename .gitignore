@@ -39,3 +39,7 @@ web_app/static/*
 
 # Ignore all logs
 compose/nginx/logs
+
+# Ignore all infras but essential files
+infras/*
+!infras/main.tf
