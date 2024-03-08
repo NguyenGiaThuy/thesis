@@ -69,7 +69,7 @@ echo ""
 echo -e "${NOCOL}[4/4] Starting to download and install models...${NOCOL}"
 
 mkdir -p results
-curl https://thuy-thesis.s3.ap-southeast-1.amazonaws.com/resnet50.zip --output ./results/resnet50.zip && unzip ./results/resnet50.zip -d ./results
+curl --ssl-no-revoke https://thuy-thesis.s3.ap-southeast-1.amazonaws.com/resnet50.zip --output ./results/resnet50.zip && unzip ./results/resnet50.zip -d ./results
 
 if [[ $? -eq 0 ]]; then
     echo -e "${GREEN}[4/4] \xE2\x9C\x94 Successfully downloaded and installed models.${NOCOL}"

@@ -29,7 +29,7 @@ def train_model3(model, criterion, optimizer,
     train_accuracies = []
     dev_accuracies = []
     if checkpoint_dir != None:
-        checkpoint = torch.load(checkpoint_dir, map_location=torch.device('cpu'))
+        checkpoint = torch.load(checkpoint_dir)
         start_epoch = checkpoint['epoch']
         train_losses = checkpoint['train_losses']
         dev_losses = checkpoint['dev_losses']
