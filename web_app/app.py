@@ -57,8 +57,11 @@ def home():
 # Define a route for csv upload
 @app.route('/upload', methods=['POST'])
 def upload():
-    file = request.files['csv_file']
-    df = pd.read_csv(file)
+    file = request.files['input_file']
+    if str(file).find('.tsv'):
+        df = pd.read_csv(file, sep='\t')
+    else:
+        df = pd.read_csv(file)
     items = []
     sample_size = len(df)
     accuracy = 0
