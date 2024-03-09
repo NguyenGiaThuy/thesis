@@ -58,7 +58,7 @@ def home():
 @app.route('/upload', methods=['POST'])
 def upload():
     file = request.files['input_file']
-    if str(file).find('.tsv'):
+    if file.filename.find('.tsv') != -1:
         df = pd.read_csv(file, sep='\t')
     else:
         df = pd.read_csv(file)
