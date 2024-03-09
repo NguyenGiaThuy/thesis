@@ -6,7 +6,7 @@ from PIL import Image
 from torch.utils.data import Dataset
 from torchvision import transforms
 import warnings
-warnings.filterwarnings("ignore", category=UserWarning, module="PIL")
+warnings.filterwarnings('ignore', category=UserWarning, module='PIL')
 
 
 

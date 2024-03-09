@@ -11,7 +11,7 @@ import load_configs
 from transformers import BertTokenizer as TextTokenizer
 from torchvision import transforms
 import warnings
-warnings.filterwarnings("ignore", category=UserWarning, module="PIL")
+warnings.filterwarnings('ignore', category=UserWarning, module='PIL')
 
 
 
@@ -22,10 +22,10 @@ app.debug = True
 if __name__ == '__main__':
     if torch.cuda.is_available():
         device = 'cuda'
-        print("CUDA is available on this system.")
+        print('CUDA is available on this system.')
     else:
         device = 'cpu'
-        print("CUDA is not available on this system.")
+        print('CUDA is not available on this system.')
 
 _, model_config, _ = load_configs.load()
 

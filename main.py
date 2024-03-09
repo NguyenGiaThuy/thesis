@@ -21,10 +21,10 @@ import sys
 if __name__ == '__main__':
     if torch.cuda.is_available():
         device = 'cuda'
-        print("CUDA is available on this system.")
+        print('CUDA is available on this system.')
     else:
         device = 'cpu'
-        print("CUDA is not available on this system.")
+        print('CUDA is not available on this system.')
         
     arguments = sys.argv
 
