@@ -45,7 +45,7 @@ model_params = {
 tokenizer = TextTokenizer.from_pretrained(model_params['text_encoder'])
 model_state_dict_dir = os.path.join(os.getcwd(), 'results', 'resnet50', 'best_model_6.pth')
 model = NewsNet3(model_params).to(dtype).to(device)
-model.load_state_dict(torch.load(model_state_dict_dir))
+model.load_state_dict(torch.load(model_state_dict_dir, map_location=torch.device(device)))
 
 labels = {0: 'true', 1: 'fake'}
 
@@ -117,4 +117,4 @@ def upload():
     return render_template('index.html', items=items, sample_size=sample_size, accuracy=round(accuracy / sample_size, 3))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
