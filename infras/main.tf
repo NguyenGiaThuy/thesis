@@ -83,8 +83,8 @@ resource "aws_vpc_security_group_egress_rule" "tf_thesis_allow_all_outbound_ipv6
 # Instance
 # ============================================================================================
 resource "aws_instance" "tf_thesis_instance" {
-  ami               = "ami-0fa377108253bf620"
-  instance_type     = "t2.micro"
+  ami               = "ami-0123c9b6bfb7eb962"
+  instance_type     = "t3.medium"
   availability_zone = "ap-southeast-1a"
 
   root_block_device {
