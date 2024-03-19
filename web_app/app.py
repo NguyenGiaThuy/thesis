@@ -47,7 +47,7 @@ model_state_dict_dir = os.path.join(os.getcwd(), 'results', 'resnet50', 'best_mo
 model = NewsNet3(model_params).to(dtype).to(device)
 model.load_state_dict(torch.load(model_state_dict_dir, map_location=torch.device(device)))
 
-labels = {0: 'true', 1: 'fake'}
+labels = {1: 'true', 0: 'fake'}
 
 # Define a route for home page
 @app.route('/', methods=['GET'])
