@@ -114,6 +114,10 @@ resource "aws_instance" "tf_thesis_instance" {
               # Test Docker + Security Group + EIP
               sudo docker run -d --name instancetest -p 80:80 nginx
 
+              # Download and unzip thesis repo
+              curl https://thuy-thesis.s3.ap-southeast-1.amazonaws.com/thesis.zip -o thesis.zip
+              unzip thesis.zip
+
               EOF
 
   tags = {
